@@ -10,6 +10,9 @@
     "start": "node bot.js",
     "postdeploy": "node bot.js"
   },
+  "engines": {
+    "node": ">=16.6.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
