@@ -8,6 +8,7 @@ const roles = ["Duelist", "Sentinel", "Initiator", "Controller"];
 
 client.on('ready', () => {
     console.log(client.user.username + " is online!");
+    client.user.setActivity("Sealing fates ;)");
 });
 
 client.on('messageCreate', (msg) => {
