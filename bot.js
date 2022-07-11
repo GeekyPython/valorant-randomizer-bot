@@ -12,18 +12,17 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
 
-    if(msg.channel.id === process.env.CHANNEL)
+    //console.log(msg.channel);
+    
+    if(msg.content === "gen#")
     {
-        if(msg.content === "gen#")
-        {
-            console.log(`Message Author: ${msg.author.username} \nMessage Content: ${msg.content}`);
-            msg.reply(`@${msg.author.username}, your agent is ` + agents[Math.floor(Math.random() * agents.length)] + " and your role is " + roles[Math.floor(Math.random() * roles.length)]);
-        }
+        console.log(`Message Author: ${msg.author.username} \nMessage Content: ${msg.content}`);
+        msg.reply(`@${msg.author.username}, your agent is ` + agents[Math.floor(Math.random() * agents.length)] + " and your role is " + roles[Math.floor(Math.random() * roles.length)]);
+    }
 
-        else if(msg.content === "help#")
-        {
-            msg.reply("To generate a random agent, type gen#");
-        }
+    else if(msg.content === "help#")
+    {
+        msg.reply("To generate a random agent, type gen#");
     }
 });
 
