@@ -12,8 +12,6 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
 
-    if(msg.channel.id === process.env.CHANNEL)
-    {
         if(msg.content === "gen#")
         {
             console.log(`Message Author: ${msg.author.username} \nMessage Content: ${msg.content}`);
@@ -24,7 +22,6 @@ client.on('messageCreate', (msg) => {
         {
             msg.reply("To generate a random agent, type gen#");
         }
-    }
 });
 
 client.login(token);
