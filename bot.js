@@ -25,7 +25,7 @@ client.on('messageCreate', (msg) => {
 
     if(msg.content === "wep#")
     {
-        console.log(`Message Author: ${msg.author.username} \nMessage Content: ${msg.content}`);
+        console.log(`Message Author: ${msg} \nMessage Content: ${msg.content}`);
         msg.reply(`@${msg.author.username}, your primary weapon is ` + primary_weapons[Math.floor(Math.random() * primary_weapons.length)] + " and your sidearm is " + secondary_weapons[Math.floor(Math.random() * secondary_weapons.length)]);
     }
 
