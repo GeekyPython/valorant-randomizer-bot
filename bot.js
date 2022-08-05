@@ -15,18 +15,18 @@ client.on('ready', () => {
 
 client.on('messageCreate', (msg) => {
 
-    //console.log(msg.channel);
+    console.log(msg);
 
     if(msg.content === "gen#")
     {
         console.log(`Message Author: ${msg.author.username} \nMessage Content: ${msg.content}`);
-        msg.reply(`@${msg.author.username}, your agent is ` + agents[Math.floor(Math.random() * agents.length)] + " and your role is " + roles[Math.floor(Math.random() * roles.length)]);
+        msg.reply(`<@${msg.author.id}>, your agent is ` + agents[Math.floor(Math.random() * agents.length)] + " and your role is " + roles[Math.floor(Math.random() * roles.length)]);
     }
 
     if(msg.content === "wep#")
     {
-        console.log(`Message Author: ${msg} \nMessage Content: ${msg.content}`);
-        msg.reply(`@${msg.author.username}, your primary weapon is ` + primary_weapons[Math.floor(Math.random() * primary_weapons.length)] + " and your sidearm is " + secondary_weapons[Math.floor(Math.random() * secondary_weapons.length)]);
+        console.log(`Message Author: ${msg.author.username}, Author ID: ${msg.author.id} \nMessage Content: ${msg.content}`);
+        msg.reply(`<@${msg.author.id}>, your primary weapon is ` + primary_weapons[Math.floor(Math.random() * primary_weapons.length)] + " and your sidearm is " + secondary_weapons[Math.floor(Math.random() * secondary_weapons.length)]);
     }
 
     else if(msg.content === "help#")
