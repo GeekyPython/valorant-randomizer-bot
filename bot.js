@@ -31,7 +31,7 @@ client.on('messageCreate', (msg) => {
 
     else if(msg.content === "help#")
     {
-        msg.reply("To generate a random agent, type gen#");
+        msg.reply("To generate a random agent, type gen# and wep# to get random wepons");
     }
 });
 
